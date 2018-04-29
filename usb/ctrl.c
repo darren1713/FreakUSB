@@ -142,7 +142,7 @@ void ctrl_get_status(req_t *req)
     U8 status[2];
     usb_pcb_t *pcb = usb_pcb_get();
 
-    memset(status, 0, 2 * sizeof(status));
+    memset(status, 0, sizeof(status));
     switch (req->type)
     {
     case GET_DEVICE_STATUS:
