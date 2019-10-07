@@ -559,10 +559,6 @@ void hw_boot_image( int usb_started )
           for( down_count = 0x147AE1; down_count != 0; down_count-- );
         }
 
-        // Set up image entry point function pointer
-        // entry point is 1 word after start of image
-        enter_image = ( void ( * )( void ) )( *( image_base + 1 ) );
-
         // Disable USB Interrupts
         NVIC_DisableIRQ( USB0_IRQn );
 
@@ -571,8 +567,9 @@ void hw_boot_image( int usb_started )
 
         // Configure image stack pointer
         __set_MSP( *image_base );
-
-        enter_image();
+       // Jump to image entry point (which should never return)
+       // entry point is 1 word after start of image
+        asm volatile("mov pc, %[src]" :: [src]"r"(*(image_base + 1)));
     }
 }
 

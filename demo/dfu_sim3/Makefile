@@ -86,8 +86,8 @@ SRC = $(TARGET).c \
 	../../usb/usb.c \
 	../../usb/ctrl.c \
 	../../usb/usb_buf.c \
-	../../class/dfu/desc.c \
-	../../class/dfu/dfu.c 
+	../../class/DFU/desc.c \
+	../../class/DFU/dfu.c
 
 #check which files to load depending on the part type
 ifeq ($(MCU), at90usb162)
@@ -154,7 +154,7 @@ DEBUG = dwarf-2
 #     Each directory must be seperated by a space.
 #     Use forward slashes for directory separators.
 #     For a directory that has spaces, enclose it in quotes.
-EXTRAINCDIRS = ../../usb ../../class/dfu
+EXTRAINCDIRS = ../../usb ../../class/DFU
 
 #check which directories to include depending on part type
 ifeq ($(MCU), at90usb162)
