@@ -1,0 +1,8 @@
+#!/bin/bash
+make clean
+make -f Makefile_large_rram EXTRA_DEFINES="-DPCB_V10 -DMEMBRANE_V1"
+mv main.hex dfu_pcbv10.hex
+mv main.bin dfu_pcbv10.bin
+mv main.elf dfu_pcbv10.elf
+echo Build completed. Please transfer via JTAG
+

@@ -6,3 +6,4 @@
 *.swp
 *.map
 .DS_Store
+demo/dfu_sim3/version.c
