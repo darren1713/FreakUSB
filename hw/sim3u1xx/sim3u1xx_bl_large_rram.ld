@@ -1,7 +1,7 @@
 MEMORY
 {
-    sret (W!RX) : ORIGIN = 0x20000000, LENGTH = 0x0020
-    sram (W!RX) : ORIGIN = 0x20000020, LENGTH = 0x7FDF
+    sret (W!RX) : ORIGIN = 0x20000000, LENGTH = 0x0080
+    sram (W!RX) : ORIGIN = 0x20000080, LENGTH = 0x7F7F
     flash (RX) : ORIGIN = 0x00000000, LENGTH = 0x2800
 }
 

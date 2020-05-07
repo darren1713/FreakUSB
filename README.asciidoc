@@ -9,7 +9,8 @@ DFU
 * Navigate to demo/dfu_sim3 directory and execute:
 
 ----
-make
+build_pcbv10_osx (for the 32 bytes RRAM version)
+build_pcbv10_osx_large_rram (for the 128 bytes RRAM version)
 ----
 
 Alternately, on Windows, the "build_flash_dfu.cmd" or "build_flash_dfu_101.cmd" (for 1.0.1 toolchain) within the demo/dfu_sim3 directory.
